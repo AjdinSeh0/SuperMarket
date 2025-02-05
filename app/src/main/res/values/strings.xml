@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Super!Market</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="textview">TextView</string>
+    <string name="rate">Rate</string>
+    <string name="liquor">Liquor</string>
+    <string name="produce">Produce</string>
+    <string name="meat">Meat</string>
+    <string name="cheese">Cheese</string>
+    <string name="checkout">Checkout</string>
+    <string name="returnToMenu">Return</string>
+    <string name="average_rating">Average Rating</string>
+</resources>
