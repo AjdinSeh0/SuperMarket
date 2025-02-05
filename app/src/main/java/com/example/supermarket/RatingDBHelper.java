@@ -6,20 +6,21 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
-
+// helps create the Database and the tables
 public class RatingDBHelper extends SQLiteOpenHelper {
-
+// database name
     private static final String DATABASE_NAME = "ratings.db";
+// the curent version of the db
     private static final int DATABASE_VERSION = 1;
 
-    // Table for Restaurants (Stores restaurant name and address)
+    // Table for Restaurants Stores restaurant name and address
     private static final String CREATE_TABLE_RESTAURANT =
             "CREATE TABLE restaurant (" +
                     "restaurant_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "name TEXT NOT NULL, " +
                     "address TEXT NOT NULL);";
 
-    // Table for Ratings (Stores ratings for different categories)
+    // Table for Ratings stores ratings for different categories
     private static final String CREATE_TABLE_RATING =
             "CREATE TABLE rating (" +
                     "rating_id INTEGER PRIMARY KEY AUTOINCREMENT, " +

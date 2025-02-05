@@ -1,5 +1,6 @@
 package com.example.supermarket;
-
+// Class for storing the values for the Restaurant object
+// has the method to retrieve the last restaurantId
 public class Restaurant {
     private int restaurantId;
     private String name;

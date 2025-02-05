@@ -1,4 +1,5 @@
 package com.example.supermarket;
+// Handles all the rating getters and setters
 
 public class Rating {
     private int ratingId;
@@ -8,7 +9,8 @@ public class Rating {
     private float cheeseRating;
     private float checkoutRating;
 
-
+// automatically sets the RatingId to zero when creating an new Rating object
+// partly for making sure no errors happen
     public Rating(){
         ratingId = -1;
     }

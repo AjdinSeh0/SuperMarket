@@ -31,21 +31,23 @@ public class MainActivity extends AppCompatActivity {
 
     private void initRatingButton(){
 
-
+// sets a listener to the rating button
         Button button = findViewById(R.id.buttonRate);
         button.setOnClickListener(v -> {
-
+// gets the values for the name and address
             EditText name = findViewById(R.id.editName);
             EditText address = findViewById(R.id.editAddress);
-
+// checks to see if they are empty
             if(!name.getText().toString().trim().isEmpty() && !address.getText().toString().trim().isEmpty()){
                 RatingDataSource ds = new RatingDataSource(this);
                 ds.open();
-
+// if they're good it creates a new Restaurant object and sets the
+// values to the name and address fields
                 Restaurant restaurant = new Restaurant();
                 restaurant.setName(name.getText().toString());
                 restaurant.setAddress(name.getText().toString());
-
+// sets the restaurantId to the database, if it returns greater than 0,
+// that means that the name/address have been sucessfully inserted
                 int restaurantId = ds.insertRestaurant(restaurant);
 
                 if (restaurantId > 0){
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.e("FAILED", "failed to insert restaurant");
                 }
                 ds.close();
+    // once its done processing the sql it closes and switches to the other scene
                 Intent intent = new Intent(MainActivity.this, RatingBars.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);}
